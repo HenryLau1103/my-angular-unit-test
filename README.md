@@ -1,13 +1,14 @@
 This repository is sample code for Angular 4 (Angular 2) SPA.  
 Use the Visual Studio Code to development.  
 
-# Angular 4 教學 - 從頭開始
+# Angular 4 教學 - 單元測試 (Unit Test) Jasmine + Karma + Webpack
 
-有不只一位前端工程師問我，為什麼要用 Visual Studio 2017 做為 Angular 4 教學工具，他們又不寫 .NET，所以我重新改用 Visual Studio Code 來做為 Angular 4 的開發工具。  
-本篇將介紹如何開始撰寫 Angular 4 (Angular 2)，包含各項套件的安裝說明及相依關係。
+*Jasmine* 框架 + *Karma* 測試執行工具是 Angular 普遍使用的單元測試組合，也是官方推薦的方法。  
+而 *Webpack* 也算 Angular 打包程式碼的主流工具，為了讓**開發**、**測試**及**正式環境**都用一樣的方式打包程式碼；  
+所以本篇 Angular 4 (Angular 2) 的單元測試 (Unit Test) 將介紹 *Jasmine*+*Karma*+*Webpack* 組合使用。  
 
 Blog：  
-[Angular 4 教學 - 從頭開始](https://blog.johnwu.cc/article/angular-4-教學-從頭開始.html)  
+[Angular 4 教學 - 單元測試 (Unit Test) Jasmine + Karma + Webpack](https://blog.johnwu.cc/article/angular-unit-test-jasmine-karma-webpack.html)  
 
 ## 說明
 

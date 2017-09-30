@@ -1,7 +1,8 @@
 var webpack = require("webpack");
 
-module.exports = {
+var config = {
     cache: true,
+    devtool: "source-map",
     entry: {
         "bundle": [__dirname + "/app/main.ts"],
         "bundle-vendors": [
@@ -42,13 +43,19 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "bundle-vendors"
-        }),
         new webpack.ContextReplacementPlugin(
             /angular(\\|\/)core(\\|\/)@angular/,
-            __dirname + "./app"
+            __dirname + "/app"
         )
     ]
+};
+
+if (process.env.NODE_ENV === "production") {
+    config.devtool = false;
+    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+    config.plugins.push(new webpack.optimize.CommonsChunkPlugin({
+        name: "bundle-vendors"
+    }));
 }
+
+module.exports = config;
